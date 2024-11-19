@@ -1,0 +1,165 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Profile Page Container */
+  .profile-container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Profile Card */
+  .profile-card {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Profile Header */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .profile-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .profile-header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .profile-header p {
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  .profile-header button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .profile-header button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Skills Section */
+  .skills-section {
+    margin-bottom: 20px;
+    display: flex;
+  }
+  
+  .skills-section h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .skills-section button {
+    margin-right: 10px;
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .skills-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Resume Section */
+  .resume-section {
+    margin-bottom: 20px;
+  }
+  
+  .resume-section label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .resume-section a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .resume-section a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Applied Jobs Section */
+  .applied-jobs-section {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .applied-jobs-section h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-container {
+      width: 95%;
+    }
+  
+    .applied-jobs-section {
+      width: 95%;
+    }
+  
+    .profile-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .profile-header img {
+      margin-bottom: 10px;
+    }
+  
+    .contact-info {
+      flex-direction: column;
+    }
+  }
+  

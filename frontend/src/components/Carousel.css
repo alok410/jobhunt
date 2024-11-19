@@ -1,0 +1,94 @@
+/* Carousel Container */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto; /* Centered with a margin */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    background-color: #f9f9f9;
+}
+
+/* Carousel Content */
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+/* Each Carousel Item */
+.carousel-item {
+    min-width: 100%; /* Each item takes up full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Content inside each item */
+.carousel-item-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff; /* Primary color */
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button inside the carousel */
+.carousel-item-content button {
+    padding: 12px 24px; /* Reduced padding for better sizing */
+    font-size: 16px; /* Slightly smaller font */
+    border: none;
+    color: white;
+    cursor: pointer;
+    /* Solid background for better visibility */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+
+/* Carousel Controls (Prev/Next buttons) */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    margin-top: -20px           
+}
+
+/* Left Control (Previous) */
+.carousel-control.prev {
+    left: 10px;
+}
+
+/* Right Control (Next) */
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Hover effect for controls */
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .carousel-item-content button {
+        font-size: 14px; /* Adjust button size for smaller screens */
+        padding: 10px 18px;
+    }
+
+    .carousel-control {
+        font-size: 20px;
+        padding: 8px;
+    }
+}

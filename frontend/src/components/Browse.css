@@ -1,0 +1,17 @@
+.job-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; /* This ensures that if there are too many jobs, they will wrap onto the next line */
+    gap: 20px; /* Optional: Adds space between job items */
+    justify-content: center; /* Optional: Center-aligns the items */
+  }
+  
+  .job-container > .job {
+    flex: 1 1 calc(33.333% - 20px); /* Adjusts the width of each job item, accounting for gap */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+  }
+  .heading{
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+  }

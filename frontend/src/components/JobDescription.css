@@ -1,0 +1,132 @@
+/* Declare CSS Variables for Reusability */
+:root {
+  --primary-color: #28a745; /* Green for buttons */
+  --hover-color: #218838; /* Darker green for hover */
+  --disabled-color: #6c757d; /* Gray for disabled buttons */
+  --background-color: #f9f9f9; /* Light background */
+  --card-background: #ffffff; /* White background for the card */
+  --text-color: #333; /* Main text color */
+  --secondary-text-color: #777; /* Secondary text color */
+  --border-radius: 10px; /* Common border radius */
+  --padding: 20px; /* Common padding */
+  --max-width: 800px; /* Common max-width */
+  --gap: 20px; /* Common gap */
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color */
+  --font-family: 'Arial', sans-serif; /* Font family */
+}
+
+body {
+  font-family: var(--font-family); /* Applying font family globally */
+  background-color: #e9ecef; /* Light gray background for the body */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+}
+
+.job-container {
+  max-width: var(--max-width);
+  margin: 40px auto; /* Added margin for better spacing around the card */
+  padding: var(--padding);
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 16px var(--shadow-color); /* Deeper shadow for a lifted effect */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.job-container:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.job-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.job-header h1 {
+  font-size: 2.5rem; /* Larger header size for emphasis */
+  font-weight: bold; /* Bold header */
+  color: var(--text-color);
+  text-transform: uppercase; /* Uppercase for a stronger impact */
+  letter-spacing: 1px; /* Spacing between letters */
+}
+
+.job-details {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+  margin-top: 10px;
+}
+
+.job-data {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+  background-color: #f1f1f1;
+  padding: 10px 15px; /* Increased padding for better touch */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+}
+
+.job-data:hover {
+  background-color: #e2e2e2; /* Feedback on hover */
+  transform: scale(1.05); /* Slightly enlarges on hover for emphasis */
+}
+
+.job-description h1 {
+  font-size: 1.5rem; /* Larger description title size */
+  margin-bottom: 10px;
+  color: #444;
+  font-weight: 600; /* Semi-bold for better emphasis */
+}
+
+.job-description span {
+  font-weight: normal;
+  color: var(--secondary-text-color);
+}
+
+.apply-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.apply-btn:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+.apply-btn:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  .job-container {
+    padding: 15px; /* Adjusting padding for smaller screens */
+  }
+
+  .job-header h1 {
+    font-size: 2rem; /* Smaller header size for mobile */
+  }
+
+  .job-details {
+    flex-direction: column; /* Stack job details vertically */
+    gap: 10px; /* Reduced gap for mobile */
+  }
+
+  .apply-btn {
+    font-size: 1rem; /* Smaller button text for mobile */
+    padding: 10px; /* Adjusted padding for better touch targets */
+  }
+
+  .job-data {
+    font-size: 0.9rem; /* Slightly smaller font for mobile */
+  }
+}
